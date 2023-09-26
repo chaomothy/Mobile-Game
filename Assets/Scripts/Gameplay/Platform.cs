@@ -9,6 +9,7 @@ public class Platform : MonoBehaviour
     public float speed = 10f;
     private float bound = -13.5f;
 
+    
     void OnCollisionEnter(Collision collision)
     {
     
@@ -22,14 +23,16 @@ public class Platform : MonoBehaviour
 
             rb.velocity = velocity;
 
+
         }
 
     }
 
-    void Update() 
+    void FixedUpdate() 
     {
     
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
+
 
         if (transform.position.z < bound) 
         {
