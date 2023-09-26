@@ -34,6 +34,14 @@ public class PlayerMovement : MonoBehaviour
         
         }
 
+
+        if (transform.position.y < -playerBounds) 
+        {
+        
+            Debug.Log("Game Over!");
+
+        }
+
     }
 
 }
