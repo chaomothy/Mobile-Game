@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerBounds = 5f;
 
     public Joystick joystick;
+    public GameManager gameManager;
 
     void Update()
     {
@@ -39,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
         {
         
             Debug.Log("Game Over!");
+
+            FindObjectOfType<GameManager>().EndGame();
 
         }
 
